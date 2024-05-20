@@ -1,9 +1,9 @@
 function getDetails(zName, zAge, zCountry) {
   function namePattern(zName) {
     if (zName.length > 1) {
-const name = zName;
-const firstname = name.split(" ")[0]
-const lesNameFarstChar= name.split(" ")[1].charAt(0).toUpperCase()
+  const name = zName;
+  const firstname = name.split(" ")[0]
+  const lesNameFarstChar= name.split(" ")[1].charAt(0).toUpperCase()
    return firstname + " " + lesNameFarstChar+"."
     }
         // Write Your Code Here
@@ -39,9 +39,6 @@ const lesNameFarstChar= name.split(" ")[1].charAt(0).toUpperCase()
 }
   return fullDetails(zName, zAge, zCountry); // Do Not Edit This
   }
-  
-
-
 
 console.log(getDetails("Osama Mohamed", "38 Is My Age", "Egypt"));
 // Hello Osama M., Your Age Is 38, You Live In EG
@@ -51,8 +48,14 @@ console.log(getDetails("Ahmed ali", "32 Is The Age", "Syria"));
 
 
 
+  const itsMe= () => `Iam A Normal Function`;
+
+
+console.log(itsMe()); // Iam A Normal Function
 
 
 
+const urlCreate=(protocol, web, tld) => `${protocol}://www.${web}.${tld}`;
 
 
+console.log(urlCreate("https", "elzero", "org")); // https://www.elzero.org
