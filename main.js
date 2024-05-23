@@ -65,3 +65,33 @@ const checker=(zName)=>(status)=>(salary)=> status === "Available" ? `${zName}, 
   
 console.log(checker("Osama")("Available")(4000)); // Osama, My Salary Is 4000
 console.log(checker("Ahmed")("Not Available")()); // Iam Not Avaialble
+
+
+function specialMix(...data) {
+  if (typeof data[0] === "number") {
+    let sum = 0;
+    for (let i = 0; i < data.length; i++) {
+      sum += data[i];
+    }
+    return sum;
+  } else if (typeof data[0] === "string") {
+    let sum = 0;
+    let allStrings = true;
+    for (let i = 0; i < data.length; i++) {
+      let num = parseInt(data[i]);
+      if (!isNaN(num)) {
+        sum += num;
+        allStrings = false;
+      }
+    }
+    if (allStrings) {
+      return "All Is Strings";
+    }
+    return sum;
+  }
+}
+
+console.log(specialMix(10, 20, 30)); // 60
+console.log(specialMix("10Test", "Testing", "20Cool")); // 30
+console.log(specialMix("Testing", "10Testing", "40Cool")); // 50
+console.log(specialMix("Test", "Cool", "Test")); // "All Is Strings"
